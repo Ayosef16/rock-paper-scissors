@@ -1,18 +1,27 @@
 //make a function for the computer selection as a random option
-function getComputerChoice(choice) {
-
+function getComputerChoice() {
+    const choice = ["rock","paper","scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
-const choice = ["rock","paper","scissors"];
+
 
 let computerSelection;
 let playerSelection;
 
+function playerChoice(a) {
+    console.log(a);
+};
+
 
 const btnChoice = document.querySelectorAll('.btn');
 
-btnChoice.forEach( button => button.addEventListener('click',playRound));
+btnChoice.forEach( button => button.addEventListener('click', () => {
+    playerSelection = button.textContent.toLowerCase();
+    playRound();
+    
+}));
+
 
 //console.log(computerSelection);
 
@@ -34,8 +43,9 @@ btnChoice.forEach( button => button.addEventListener('click',playRound));
 
 function playRound (computerSelection,playerSelection) {
 
-    computerSelection = getComputerChoice(choice);
-    playerSelection = button.textContent.toLowerCase();
+    computerSelection = getComputerChoice();
+    
+    
 
     if (computerSelection === "rock" && playerSelection === "paper") {
         return "You win! paper beats rock"
