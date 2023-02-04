@@ -1,0 +1,65 @@
+body{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+    margin = 0;
+    padding = 0;
+    
+}
+
+.winner{
+    font-weight: 900;
+    font-size: 60px;
+    color: aqua;
+    margin-top: 40px;
+}
+
+
+.btn{
+    font-weight: 900;
+    font-size: 20px;
+    border: 3px solid red;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1em;
+    
+}
+
+.result{
+    font-weight: 900;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.score, .playerChoice, .computerChoice{
+    font-weight: 500;
+    }
+ 
+.score{
+    font-size: 40px;
+    color: yellow;
+    margin-top: 50px;
+}
+
+.choicecontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: aqua;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.btncontainer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+
