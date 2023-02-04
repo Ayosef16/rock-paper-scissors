@@ -22,7 +22,6 @@ body{
     border: 3px solid red;
     background-color: black;
     color: white;
-    padding: 10px 20px;
     border-radius: 1em;
     
 }
@@ -62,4 +61,8 @@ body{
     
 }
 
+img{
+    height: 100px;
+    width: auto;
+}
 
