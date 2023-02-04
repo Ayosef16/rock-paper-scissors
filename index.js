@@ -6,7 +6,13 @@ function getComputerChoice(choice) {
 
 const choice = ["rock","paper","scissors"];
 
-//let computerSelection = getComputerChoice(choice)
+let computerSelection;
+let playerSelection;
+
+
+const btnChoice = document.querySelectorAll('.btn');
+
+btnChoice.forEach( button => button.addEventListener('click',playRound));
 
 //console.log(computerSelection);
 
@@ -27,6 +33,9 @@ const choice = ["rock","paper","scissors"];
 //make the function to compare computer selection vs player selection
 
 function playRound (computerSelection,playerSelection) {
+
+    computerSelection = getComputerChoice(choice);
+    playerSelection = button.textContent.toLowerCase();
 
     if (computerSelection === "rock" && playerSelection === "paper") {
         return "You win! paper beats rock"
@@ -61,7 +70,7 @@ let computer = 0;
 let draw = 0;
 
 
-function game() {
+/*function game() {
     for (let i = 0; i < 5; i++) {
         let computerSelection = getComputerChoice(choice);
         console.log(computerSelection);
@@ -98,4 +107,4 @@ function game() {
     }
 }
 
-game()
+game()*/
