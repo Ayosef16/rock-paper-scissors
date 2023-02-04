@@ -4,20 +4,23 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
+// create variables for player and computer selection
 let computerSelection;
 let playerSelection;
 
-const btnChoice = document.querySelectorAll('.btn');
 
+
+//create selector
+const btnChoice = document.querySelectorAll('.btn');
+const result = document.querySelector('.result');
+
+//add an event for each time u click a button
 btnChoice.forEach( button => button.addEventListener('click', () => {
     playerSelection = button.value.toLowerCase();
     console.log({playerSelection});
     computerSelection = getComputerChoice();
     console.log({computerSelection});
-    console.log(playRound(computerSelection,playerSelection));
-
-    
-    
+    result.textContent = playRound(computerSelection,playerSelection);
 }));
 
 //make the function to compare computer selection vs player selection
