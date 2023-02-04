@@ -4,49 +4,26 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
-
-
 let computerSelection;
 let playerSelection;
-
-function playerChoice(a) {
-    console.log(a);
-};
-
 
 const btnChoice = document.querySelectorAll('.btn');
 
 btnChoice.forEach( button => button.addEventListener('click', () => {
-    playerSelection = button.textContent.toLowerCase();
-    playRound();
+    playerSelection = button.value.toLowerCase();
+    console.log({playerSelection});
+    computerSelection = getComputerChoice();
+    console.log({computerSelection});
+    console.log(playRound(computerSelection,playerSelection));
+
+    
     
 }));
 
-
-//console.log(computerSelection);
-
-//console.log(typeof computerSelection);
-
-//make the user to input their choice
-
-//let playerSelection = prompt("Choose between rock,paper,scissors");
-
-//make the string lowercase
-
-//playerSelection = playerSelection.toLowerCase();
-
-//console.log(playerSelection);
-
-//console.log(typeof playerSelection);
-
 //make the function to compare computer selection vs player selection
 
-function playRound (computerSelection,playerSelection) {
-
-    computerSelection = getComputerChoice();
+function playRound (computerSelection,playerSelection) {   
     
-    
-
     if (computerSelection === "rock" && playerSelection === "paper") {
         return "You win! paper beats rock"
     }
