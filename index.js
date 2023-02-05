@@ -82,4 +82,8 @@ function playRound (computerSelection,playerSelection) {
     }
 }
 
-//refreshBtn.addEventListener('click', location.reload());
+refreshBtn.addEventListener('click', refreshPage);
+
+function refreshPage() {
+    window.location.reload();
+};
