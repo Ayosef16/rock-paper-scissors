@@ -19,6 +19,7 @@ const score = document.querySelector('.score');
 const playerChoice = document.querySelector('.playerChoice');
 const computerChoice = document.querySelector('.computerChoice');
 const winner = document.querySelector('.winner');
+const refreshBtn = document.querySelector('.refreshbtn');
 
 
 //add an event for each time u click a button
@@ -32,9 +33,11 @@ btnChoice.forEach( button => button.addEventListener('click', () => {
         computerChoice.textContent = `Computer: ${computerSelection}`;
         if (player === 5) {
             winner.textContent = 'Player Wins!';
+            refreshBtn.style.visibility = "visible";
         }
         else if (computer === 5) {
             winner.textContent = 'Computer Wins!';
+            refreshBtn.style.visibility = "visible";
         }
     }
     else {
@@ -78,3 +81,5 @@ function playRound (computerSelection,playerSelection) {
         return "Error"
     }
 }
+
+//refreshBtn.addEventListener('click', location.reload());
